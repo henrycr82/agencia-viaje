@@ -1,0 +1,19 @@
+header
+    .navegacion
+        .container
+            .row.justify-content-center.justify-content-md-between.align-items-center.py-4
+                .col-6.col-md-4
+                    a(href="/")
+                        img(src="/img/logo.svg", alt="Logo Agencia de Viajes" class="img-fluid")
+                .col-6.col-md-8
+                    nav.nav.justify-content-center.justify-content-md-end
+                        //-
+                           Uso el operardor ternario para evaluar
+                           si la variable ruta (server/index.js) tiene cargada alguna ruta
+                           como la de los links (/nosotros,/viajes o /testimoniales)
+                           si tiene cargado alguna ruta la paso la clase 'active', caso contrario
+                           lo dejo en blanco
+                            //
+                        a.nav-link(href="/nosotros", class=(ruta === '/nosotros' ? 'active' : '')) Nosotros
+                        a.nav-link(href="/viajes", class=(ruta === '/viajes' ? 'active' : '')) Viajes
+                        a.nav-link(href="/testimoniales", class=(ruta === '/testimoniales' ? 'active' : '')) Testimonaliales
